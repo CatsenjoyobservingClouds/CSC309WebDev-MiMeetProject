@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Meeting Scheduler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">MiMeet</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class='navbar-nav mr-auto'>
+                    <li class='nav-item dropdown'>
+                        <a class='nav-link dropdown-toggle rounded-start'  href='#' id='navbarDropdownAbout' role='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>My space</a>
+                        <div class='dropdown-menu dropdown-menu-end dropdown-menu-edit' aria-labelledby='navbarDropdownAbout'>
+                            <div class="d-flex align-items-end menu-content">
+                                <img src="user.png" class="img-fluid rounded-circle my-image-icon">
+                                <p>Nastia Burdym</p>
+                            </div>
+                            <a class='dropdown-item' href='profile.html' data-toggle='modal'>My dashboard</a>
+                            <a class='dropdown-item' href='my_contacts.html' data-toggle='modal'>My contacts</a>
+                            <button type="button" class="btn btn-outline-info logout">Log out</button>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center mb-5">
+                <input type="text" id="calendarName" class="form-control mb-3" placeholder="Enter calendar name">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Meeting Deadline</span>
+                    <input type="datetime-local" id="meetingDeadline" class="form-control" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="mt-5">Your Contacts</h5>
+                        <div class="contact-box">
+                            <div class="list-group" id="availableContacts">
+                                <button type="button" class="list-group-item list-group-item-action" onclick="moveContact(this)">Dasha</button>
+                                <button type="button" class="list-group-item list-group-item-action" onclick="moveContact(this)">Masha</button>
+                                <button type="button" class="list-group-item list-group-item-action" onclick="moveContact(this)">Sasha</button>
+                                <button type="button" class="list-group-item list-group-item-action" onclick="moveContact(this)">Pasha</button>
+                                <button type="button" class="list-group-item list-group-item-action" onclick="moveContact(this)">Kasha</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="mt-5">Invited Contacts</h5>
+                        <div class="contact-box">
+                            <div class="list-group" id="selectedContacts">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center mb-5">
+                <div class="elegant-calendar d-md-flex">
+                    <div class="wrap-header d-flex align-items-center">
+                        <p id="reset"></p>
+                        <div id="header" class="p-0">
+                            <div class="pre-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-left"></i></div>
+                            <div class="head-info">
+                                <div class="head-day"></div>
+                                <div class="head-month"></div>
+                            </div>
+                            <div class="next-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="calendar-wrap">
+                        <table id="calendar">
+                            <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-md-3">
+                <button type="button" id="createCalendarBtn" class="btn btn-primary btn-block" onclick="window.location.href='meetings.html'">Create Calendar</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="modal fade" id="timeSlotsModal" tabindex="-1" aria-labelledby="timeSlotsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="timeSlotsModalLabel">Select Time Slot</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mt-3">
+                    <label for="preferenceSelect" class="form-label">Select Preference for chosen time slots</label>
+                    <select class="form-select" id="preferenceSelect">
+                        <option value="">Select...</option>
+                        <option value="high">High preference</option>
+                        <option value="low">Low preference</option>
+                    </select>
+                </div>
+                <div id="time-slot-container" class="d-flex flex-wrap">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save Selection</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-XN6pRqprhOAfa2w+2Kc2LpFdE5Csfz8e3jf8+3VX20oe5RoEGnwcl2aaMIR7D1w/" crossorigin="anonymous"></script>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="profile_styles.css" media="screen">
+    <title>Title</title>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-5" href="#">MiMeet</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class='navbar-nav mr-auto'>
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle rounded-start'  href='#' id='navbarDropdownAbout' role='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>My space</a>
+                    <div class='dropdown-menu dropdown-menu-end dropdown-menu-edit' aria-labelledby='navbarDropdownAbout'>
+                        <div class="d-flex align-items-end menu-content">
+                            <img src="user.png" class="img-fluid rounded-circle my-image-icon">
+                            <p>Nastia Burdym</p>
+                        </div>
+                        <a class='dropdown-item' href='profile.html' data-toggle='modal'>My dashboard</a>
+                        <a class='dropdown-item' href='my_contacts.html' data-toggle='modal'>My contacts</a>
+                        <button type="button" class="btn btn-outline-info logout">Log out</button>
+                    </div>
+                </li>
+
+                <li class='nav-item ms-5'>
+                    <button type="button" class="btn btn-outline-warning" onclick="window.location.href='new_calendar.html'">New Meeting</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container-fluid">
+        <div class="row content">
+
+
+
+            <div class="col-sm-8">
+                <h2>My profile</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <img src="user.png" class="img-fluid rounded-circle my-image">
+                            <button type="button" class="btn new-photo-button">Upload new photo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="col-md-6 ">
+                    <div class="profile-info">
+                        <label for="name">Name:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="name" value="Nastia Burdym" disabled>
+                        </div>
+                    </div>
+
+                    <div class="profile-info">
+                        <label for="name">Email:</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input type="email" class="form-control" id="email" value="nastia@gmail.com" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 sidenav">
+
+                <div class="my-events-profile">
+                    <a class="nav-link" href="meetings.html">My Meetings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="container-fluid">
+    <p></p>
+</footer>
+
+</body>
+</html>

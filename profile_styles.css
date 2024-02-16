@@ -1,0 +1,172 @@
+
+
+.label {
+    font-style: italic;
+    color: #312d2d;
+}
+
+.my-image {
+    width: 200px;
+    height: 200px;
+}
+
+.my-image-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.menu-content {
+    margin-left: 20px;
+    height: 80px;
+}
+
+.dropdown-item {
+    margin-top: 10px;
+    height: 40px;
+    color: #032539;
+}
+
+.logout {
+    margin: 10px;
+    width: 90%;
+}
+
+main {
+    margin: 50px;
+}
+
+body {
+    background-color: #fbf3f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+}
+
+.my-events-profile,
+.invited-events {
+    width: 200px;
+    height: 100px;
+    background-color: #f1b15b;
+    color: white;
+    text-align: center;
+    line-height: 100px; /* Center content vertically */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.new-photo-button {
+    margin-top: 40%;
+    margin-left: 20px;
+    background-color: #032539;
+    color: #f1b15b;
+}
+
+.profile-menu {
+    padding-top: 30%;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #ffc8c8;
+}
+
+.nav-link.dropdown-toggle.rounded-start.active,
+.nav-link.dropdown-toggle.rounded-start:focus {
+    border-radius: 0.5rem 0 0 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu-edit {
+    min-width: 300px;
+}
+
+nav-item,
+.nav-item dropdown {
+    margin-left: 90px;
+}
+
+.container-fluid {
+    margin-right: 50px;
+}
+
+.profile-info {
+    margin: 20px;
+}
+
+.my-event {
+    width: 400px;
+    height: 200px;
+    background-color: #f3b06a;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.my-event p,
+.my-event-finalized p{
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 10px;
+}
+
+.my-event ul,
+.my-event-finalized ul{
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.my-event-finalized {
+    width: 400px;
+    height: 200px;
+    background-color: #82817f;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-block {
+    /*display: inline-grid;
+    flex-direction: column;
+    justify-content: space-between;*/
+    align-items: center;
+    /*height: 100vh;*/
+
+}
+
+footer {
+    height: 3rem;
+    width: 100vw;
+    margin-top: auto;
+    background-color: #032539;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    size: 5px;
+    text-decoration: none;
+}

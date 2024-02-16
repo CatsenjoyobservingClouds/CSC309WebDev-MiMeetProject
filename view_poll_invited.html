@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style_view_poll_invited.css">
+    <link rel="stylesheet" href="colors.css">
+
+    <title>1on1</title>
+
+    <script>const clickCountsMap = new Map(); </script>
+</head>
+
+<body>
+
+
+    <main>
+
+        <body class="bg-light-our m-8">
+            <div class="container-fluid">
+                <div class="row">
+                    <sidebar class="col-md-3 bg-white pl-6 p-6 shadow-md pr-8 pt-12">
+                        <h2 class="text-2xl font-bold mb-8">Concert Rehearsal</h2>
+                        <p class="mb-2"><strong>Nataliia Baysa</strong> is organizing</p>
+                        <p><strong>Time</strong> &nbsp; 2 hour</p>
+                        <p><strong>Location</strong> &nbsp; Central Park, New York City</p>
+                        <p><strong>Description</strong> &nbsp; Just take a walk with you guys. Missed u!</p>
+                    </sidebar>
+
+                    <div class="col-md-9 bg-white p-6 shadow-md pl-8 pt-12">
+                        <div class="flex gap-12 items-center mb-16">
+                        <h2 class="text-xl font-bold">Select your preferred times</h2>
+                        <button class="btn btn-success" id="bg-button-save">Save</button>
+                    </div>
+                        <div class="overflow-x-auto">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="sticky left-0 z-10 text-xl text-center">You</th>
+                                        <th role="button" class="text-center btn-special" id="time-1" onclick="toggleCheck(this)">
+                                            <div class="font-bold text-1xl">FEB 12</div>
+                                            <div class="text-sm pb-1">MONDAY</div>
+                                            <div class="font-bold pb-1">10 - 12 am</div>
+                                            <div class="square mx-auto" type="button"></div>
+                                        </th>
+                                        <th role="button" class="text-center btn-special" id="time-2" onclick="toggleCheck(this)">
+                                            <div class="font-bold text-1xl">FEB 12</div>
+                                            <div class="text-sm pb-1">MONDAY</div>
+                                            <div class="font-bold pb-1">12 - 14 am</div>
+                                            <div class="square mx-auto" type="button"></div>
+                                        </th>
+                                        <th role="button" class="text-center btn-special" id="time-3" onclick="toggleCheck(this)">
+                                            <div class="font-bold text-1xl">FEB 13</div>
+                                            <div class="text-sm pb-1">TUESDAY</div>
+                                            <div class="font-bold pb-1">10 - 12 am</div>
+                                            <div class="square mx-auto" type="button"></div>
+                                        </th>
+                                        <th role="button" class="text-center btn-special" id="time-4" onclick="toggleCheck(this)">
+                                            <div class="font-bold text-1xl">FEB 13</div>
+                                            <div class="text-sm pb-1">TUESDAY</div>
+                                            <div class="font-bold pb-1">12 - 14 am</div>
+                                            <div class="square mx-auto" type="button"></div>
+                                        </th>
+                                        <th role="button" class="text-center btn-special" id="time-5" onclick="toggleCheck(this)">
+                                            <div class="font-bold text-1xl">FEB 15</div>
+                                            <div class="text-sm pb-1">THURSDAY</div>
+                                            <div class="font-bold pb-1">16 - 18 am</div>
+                                            <div class="square mx-auto" type="button"></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bs-table-bg-gray">
+                                        <th class="sticky left-0 z-10">Availability</th>
+                                        <th class="text-center"><i class="bi bi-people-fill"></i> 2</th>
+                                        <th class="text-center"><i class="bi bi-people-fill"></i> 0</th>
+                                        <th class="text-center"><i class="bi bi-people-fill"></i> 3</th>
+                                        <th class="text-center"><i class="bi bi-people-fill"></i> 2</th>
+                                        <th class="text-center"><i class="bi bi-people-fill"></i> 1</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="sticky left-0 z-10 bg-white" data-toggle="tooltip"
+                                            title="06082004an@gmail.com" onclick="copyTitle(this)">
+                                            Mariia Chernyshenko</th>
+                                        <td class="text-center question-orange"><i class="bi bi-question"></i></td>
+                                        <td class="text-center cross-red"><i class="bi bi-x"></i></td>
+                                        <td class="text-center check-green"><i class="bi bi-check"></i></td>
+                                        <td class="text-center cross-red"><i class="bi bi-x"></i></td>
+                                        <td class="text-center cross-red"><i class="bi bi-x"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="sticky left-0 z-10 bg-white" data-toggle="tooltip"
+                                            title="anna.tsvietkova@ukma.edu.ua" onclick="copyTitle(this)">Rita
+                                            Savluk
+                                        </th>
+                                        <td class="text-center cross-red"><i class="bi bi-x"></i></td>
+                                        <td class="text-center cross-red"><i class="bi bi-x"></i></td>
+                                        <td class="text-center check-green"><i class="bi bi-check"></i></td>
+                                        <td class="text-center check-green"><i class="bi bi-check"></i></td>
+                                        <td class="text-center cross-red"><i class="bi bi-x"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </body>
+    </main>
+    <footer>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        function copyTitle(element) {
+            var title = element.getAttribute('title');
+            var tempInput = document.createElement("input");
+            tempInput.value = title;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        }
+
+        function toggleCheck(head_item) {
+            let clickCount = clickCountsMap.get(head_item) || 0;
+
+            const square = head_item.querySelectorAll('[type="button"]')[0];
+            clickCount++;
+            clickCountsMap.set(head_item, clickCount);
+
+
+            if (clickCount % 3 === 1) {
+                square.textContent = '🗸';
+                square.classList.remove('yellow');
+                square.classList.add('green');
+                head_item.classList.add('green-bg');
+                head_item.classList.remove('yellow-bg');
+            } else if (clickCount % 3 === 2) {
+                square.textContent = '?';
+                square.classList.remove('green');
+                square.classList.add('yellow');
+                head_item.classList.remove('green-bg');
+                head_item.classList.add('yellow-bg');
+            } else {
+                square.textContent = '';
+                square.classList.remove('green', 'yellow');
+                head_item.classList.remove('yellow-bg', 'green-bg');
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

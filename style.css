@@ -1,0 +1,283 @@
+.time-slot {
+    border: 1px solid #000;
+    margin: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #1c768f;
+    border-color: #1c768f;
+}
+
+.contact-box {
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: 20px;
+}
+#selectedContacts {
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    border-radius: 0.25rem;
+
+}
+
+.day-with-time {
+    background-color: green;
+    color: white;
+}
+
+.time-slot.selected {
+    background-color: #add8e6;
+}
+
+.time-slot.high-preference {
+    background-color: #90ee90;
+}
+
+.time-slot.low-preference {
+    background-color: #ffcc80;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+body {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #f8f9fd;
+    color: gray;
+}
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #39cb75;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: "Lato", Arial, sans-serif;
+    color: #000;
+}
+
+.bg-primary {
+    background: #39cb75 !important;
+}
+
+.ftco-section {
+    padding: 7em 0;
+}
+
+.ftco-no-pt {
+    padding-top: 0;
+}
+
+.ftco-no-pb {
+    padding-bottom: 0;
+}
+
+.heading-section {
+    font-size: 28px;
+    color: #000;
+}
+
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.elegant-calencar {
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 19px 27px -20px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 19px 27px -20px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 19px 27px -20px rgba(0, 0, 0, 0.16);
+}
+
+.wrap-header {
+    position: relative;
+    width: 45%;
+    background: #1c768f;
+}
+
+@media (max-width: 767.98px) {
+    .wrap-header {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+
+#header {
+    width: 100%;
+    position: relative;
+}
+
+#header .pre-button,
+#header .next-button {
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+#header .pre-button i,
+#header .next-button i {
+    color: #fff;
+}
+
+.pre-button {
+    left: 5px;
+}
+
+.next-button {
+    right: 5px;
+}
+
+.head-day {
+    font-size: 8em;
+    line-height: 1;
+    color: #fff;
+}
+
+.head-month {
+    font-size: 2em;
+    line-height: 1;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+.morning {
+    background-color: #f2f2f2;
+}
+
+.afternoon {
+    background-color: #e6f2ff;
+}
+
+
+.calendar-wrap {
+
+    width: 100%;
+    background: #fff;
+    padding: 40px 20px 20px 20px;
+}
+
+#calendar {
+    width: 100%;
+}
+
+#calendar tr {
+    height: 3em;
+}
+
+thead tr {
+    color: #000;
+    font-weight: 700;
+}
+
+tbody tr {
+    color: #000;
+}
+
+tbody td {
+    width: 14%;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    position: relative;
+    z-index: 0;
+}
+
+tbody td:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+tbody td:hover,
+.selected {
+    color: #fff;
+    border: none;
+}
+
+tbody td:hover:after,
+.selected:after {
+    background: #2a3246;
+}
+
+tbody td:active {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+}
+
+#today {
+    color: #fff;
+}
+
+#today:after {
+    background: #39cb75;
+}

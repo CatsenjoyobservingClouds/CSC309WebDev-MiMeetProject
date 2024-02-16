@@ -1,0 +1,41 @@
+:root {
+    --green-color: #23ce6b;
+    --orange-color: #FA991C;
+    --light-color: #FBF3F2;
+    --blue-color: #1C768F;
+    --dark-color: #032539;
+}
+
+
+.bg-light-our {
+    background-color: var(--light-color);
+}
+
+#bg-button-book {
+    background-color: var(--green-color);
+    color: var(--dark-color);
+    border: none;
+}
+
+#bg-button-book:hover {
+    background-color: var(--blue-color);
+    color: var(--light-color);
+}
+
+.bg-dark-our {
+    background-color: var(--dark-color);
+}
+
+.bg-orange-our {
+    background-color: #FA991C;
+}
+
+#bg-button-save {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+}
+
+#bg-button-save:hover {
+    background-color: var(--green-color);
+}

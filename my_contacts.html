@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My contacts</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="add_contacts_sign.css">
+    <link rel="stylesheet" href="profile_styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body class="sign_up">
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">MiMeet</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class='navbar-nav mr-auto'>
+                    <li class='nav-item dropdown'>
+                        <a class='nav-link dropdown-toggle rounded-start'  href='#' id='navbarDropdownAbout' role='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>My space</a>
+                        <div class='dropdown-menu dropdown-menu-end dropdown-menu-edit' aria-labelledby='navbarDropdownAbout'>
+                            <div class="d-flex align-items-end menu-content">
+                                <img src="user.png" class="img-fluid rounded-circle my-image-icon">
+                                <p>Nastia Burdym</p>
+                            </div>
+                            <a class='dropdown-item' href='profile.html' data-toggle='modal'>My dashboard</a>
+                            <a class='dropdown-item' href='my_contacts.html' data-toggle='modal'>My contacts</a>
+                            <button type="button" class="btn btn-outline-info logout">Log out</button>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+<div class="container_fluid container_my_contacts mt-4 lg-10" >
+    <p class="display-6 center-form"> My contacts</p>
+    <div class="row_actions_contacts d-flex justify-content-center align-items-center ">
+
+        <div class="col-md-5 text-center">
+            <div class="input-group search-bar">
+                <input type="text" class="form-control" placeholder="Search contacts" aria-label="Search contacts">
+                <div class="input-group-append">
+                    <button class="btn add-contact-btn" type="button">Search</button>
+                    <button class="btn add-contact-btn add-contact-btn_plus" data-toggle="modal" data-target="#addContactModal">Add Contact</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+           <div class="spacer"></div>
+
+
+                <div class="row row_my_contacts ">
+                    <div class="container container_list_contacts border">
+                    <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="header_of_table">
+                            <th class="col-5">Profile Picture</th>
+                            <th class="col-5">Name</th>
+                            <th class="col-5">Email</th>
+                            <th class="col-5">Operations</th>
+                        </tr>
+                        </thead>
+                        <tbody id="contacts-list">
+                        <tr>
+                            <td class="col-5 "><img src="profile1.jpg" alt="Profile Picture" class="image_contact"></td>
+                            <td class="col-5">John Doe</td>
+                            <td class="col-5">john.doe@example.com</td>
+                            <td class="col-5">
+                                <img src="edit_icon.png" alt="Edit" class="operation-icon">
+                                <img src="delete_icon.png" alt="Delete" class="operation-icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-5"><img src="profile3.jpg" alt="Profile Picture " class="image_contact"></td>
+                            <td class="col-5">Jane Smith</td>
+                            <td class="col-5">jane.smith@example.com</td>
+                            <td class="col-5">
+                                <img src="edit_icon.png" alt="Edit" class="operation-icon">
+                                <img src="delete_icon.png" alt="Delete" class="operation-icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-5 "><img src="profile1.jpg" alt="Profile Picture" class="image_contact"></td>
+                            <td class="col-5">Michael Johnson</td>
+                            <td class="col-5">michael.johnson@example.com</td>
+                            <td class="col-5">
+                                <img src="edit_icon.png" alt="Edit" class="operation-icon">
+                                <img src="delete_icon.png" alt="Delete" class="operation-icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-5 "><img src="profile3.jpg" alt="Profile Picture" class="image_contact"></td>
+                            <td class="col-5">Emily Brown</td>
+                            <td class="col-5">emily.brown@example.com</td>
+                            <td class="col-5 ">
+                                <img src="edit_icon.png" alt="Edit" class="operation-icon">
+                                <img src="delete_icon.png" alt="Delete" class="operation-icon">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+        </div>
+
+
+
+</div>
+
+
+
+
+    <div class="modal fade" id="addContactModal" tabindex="-1" role="dialog" aria-labelledby="addContactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addContactModalLabel">Add Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="contact-name" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="contact-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact-email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="contact-email">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn modal_add-contact-btn" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn modal_add-contact-btn">Add Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.add-contact-btn').click(function () {
+                $('#addContactModal').modal('show');
+            });
+            $('#addContactModal .btn-primary').click(function () {
+                var name = $('#contact-name').val();
+                var email = $('#contact-email').val();
+                $('#addContactModal').modal('hide');
+            });
+        });
+    </script>
+
+
+</main>
+
+
+
+
+</body>
+</html>

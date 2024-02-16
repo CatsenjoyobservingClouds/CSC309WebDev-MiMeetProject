@@ -1,0 +1,38 @@
+.bs-table-bg-gray {
+    --bs-table-bg: #c9e0e6;
+}
+
+td i {
+    font-size: x-large;
+}
+
+td.check-green {
+    background-color: rgba(117, 226, 117, 0.674);
+}
+
+td.question-orange {
+    background-color: rgba(226, 226, 117, 0.674);
+}
+
+td.cross-red {
+    background-color: rgba(226, 152, 117, 0.674);
+}
+
+th.btn-special {
+    padding-inline: 24px;
+    border: 1px solid var(--orange-color);
+}
+
+i.bi-star {
+    color: var(--orange-color);
+    transition: font-size 0.3s ease;
+}
+
+th.btn-special:hover {
+    background-color: rgba(255, 152, 16, 0.1);
+}
+
+th.btn-special:hover .bi-star{
+    color: rgb(255, 152, 16);
+    font-size: xx-large;
+}

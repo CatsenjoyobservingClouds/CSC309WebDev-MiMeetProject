@@ -1,0 +1,144 @@
+
+p {
+    color: #032539;
+}
+
+.form-label{
+    color: #032539;
+}
+.cuss{
+    color: #032539;
+}
+.btn_sign_in{
+    background-color: #032539;
+    color: #FBF3F2;
+    height: 50px;
+    width: 100px;
+}
+
+.btn_sign_up{
+    margin-top: 20px;
+    background-color: #032539;
+    color: #FBF3F2;
+    height: 40px;
+    width: 150px;
+}
+
+
+
+.center-form{
+    display: flex;
+    justify-content: center;
+
+}
+#left-part{
+
+    background-color: #FA991C;
+
+}
+
+
+.border{
+    height: 500px;
+    width: 500px;
+}
+
+body{
+    background-color: #FBF3F2;
+}
+
+.border_sign_up{
+    height: 700px;
+    width: 600px;
+
+    border-radius: 50px;
+    box-shadow: 0 0 10px #FA991C;
+}
+
+main{
+    margin: 20px;
+}
+
+
+
+.form-label{
+    color: #032539;
+}
+
+/* світло-синій - #1C768F
+синій - #032539
+білий  -  #FBF3F2
+оранджевий - #FA991C
+зелений -
+ */
+
+
+
+.add-contact-btn{
+    background-color: #FA991C;
+    margin-top: 20px;
+    color: #FBF3F2;
+    height: 40px;
+    width: 150px;
+
+}
+
+.form-control{
+    height: 40px;
+    margin-top: 20px;
+}
+
+.close_contact_add{
+    font-size: 1.5rem;
+    color: #032539;
+    opacity: 0.5;
+    border-radius: 10px;
+
+}
+
+.modal_add-contact-btn{
+    background-color: #032539;
+    margin-top: 20px;
+    color: #FBF3F2;
+    height: 40px;
+    width: 150px;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+.header_of_table th{
+    color: #032539 !important;
+    font-weight: normal ;
+}
+
+
+.container_list_contacts{
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+}
+.container_list_contacts .col-5{
+    width: 25%;
+}
+
+.image_contact {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.operation-icon{
+    width: 20px;
+    height: 20px;
+
+}
+.spacer {
+    margin-top: 20px;
+}
+

@@ -1,0 +1,43 @@
+.bs-table-bg-gray {
+    --bs-table-bg: #1c768f40;
+}
+
+td i {
+    font-size: x-large;
+}
+
+th.btn-special {
+    padding-inline: 24px;
+}
+
+
+th.btn-special:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.square {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.green {
+    background-color: var(--green-color);
+}
+
+.yellow {
+    background-color: var(--orange-color);
+}
+
+th.green-bg, th.green-bg:hover {
+    background-color: #23ce6a34;
+}
+
+th.yellow-bg, th.yellow-bg:hover {
+    background-color: #FA991C34;
+}

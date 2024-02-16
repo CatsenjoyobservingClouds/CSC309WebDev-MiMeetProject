@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style_view_poll.css">
+    <link rel="stylesheet" href="colors.css">
+
+    <title>1on1</title>
+</head>
+
+<body>
+
+<main>
+
+    <body class="bg-light-our mx-8">
+    <div class="container mx-auto py-8 lg:w-4/5">
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8 flex flex-col">
+            <div class=" mb-6 flex items-center justify-between">
+                <h2 class="text-4xl font-bold">Concert Rehearsal</h2>
+                <div class="mr-6 mb-2">
+
+                    <button type="button" class="btn btn-secondary mt-4 mr-8 bg-dark-our">Copy Meeting link</button>
+
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="mr-4">
+                    <p class="mb-2"><strong>You are the organizer.</strong></p>
+                    <p><strong>Time</strong> &nbsp; 2 hour</p>
+                    <p><strong>Location</strong> &nbsp;Online </p>
+                    <p><strong>Description</strong> &nbsp; Revise project from the company</p>
+                    <p><strong>Date</strong> 12 January</p>
+                    <p><strong>Time</strong> 14:00 - 16:00</p>
+                </div>
+                <div class="mr-6">
+                    <div class="list-group overflow-auto max-h-50">
+                        <a href="#"
+                           class="list-group-item list-group-item-action flex justify-between items-center"
+                           data-toggle="tooltip" title="tsv.worklady@gmail.com">
+                            Dariia Plachotna
+
+                        </a>
+
+                        <a href="#"
+                           class="list-group-item list-group-item-action flex justify-between items-center"
+                           data-toggle="tooltip" title="anna.tsvetkova@mail.utoronto.ca">
+                            Anna Tsvetkova
+
+                        </a>
+
+                        <a href="#"
+                           class="list-group-item list-group-item-action flex justify-between items-center"
+                           data-toggle="tooltip" title="oksana.cherkas@gmail.com">
+                            Oksana Cherkas
+
+                        </a>
+
+                        <a href="#"
+                           class="list-group-item list-group-item-action flex justify-between items-center"
+                           data-toggle="tooltip" title="06082004an@gmail.com">
+                            Mariia Chernyshenko
+
+                        </a>
+
+                        <a href="#"
+                           class="list-group-item list-group-item-action flex justify-between items-center"
+                           data-toggle="tooltip" title="anna.tsvietkova@ukma.edu.ua">
+                            Rita Savluk
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </body>
+</main>
+<footer>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    function copyTitle(element) {
+        var title = element.getAttribute('title');
+        var tempInput = document.createElement("input");
+        tempInput.value = title;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+    }
+
+    function toggleStar(head_item) {
+        let clickCount = clickCountsMap.get(head_item) || 0;
+
+        const square = head_item.querySelectorAll('[type="button"]')[0];
+        clickCount++;
+        clickCountsMap.set(head_item, clickCount);
+
+
+        if (clickCount % 3 === 1) {
+            square.textContent = '🗸';
+            square.classList.remove('yellow');
+            square.classList.add('green');
+            head_item.classList.add('green-bg');
+            head_item.classList.remove('yellow-bg');
+        } else if (clickCount % 3 === 2) {
+            square.textContent = '?';
+            square.classList.remove('green');
+            square.classList.add('yellow');
+            head_item.classList.remove('green-bg');
+            head_item.classList.add('yellow-bg');
+        } else {
+            square.textContent = '';
+            square.classList.remove('green', 'yellow');
+            head_item.classList.remove('yellow-bg', 'green-bg');
+        }
+
+    }
+
+    function chooseTimeStar(clickedItem) {
+        const starsRow = document.getElementById('star-row');
+        const thElements = starsRow.getElementsByTagName('th');
+
+        clickedItem.style.backgroundColor = 'rgba(255, 152, 16, 0.25)';
+        for (let i = 0; i < thElements.length; i++) {
+            if (thElements[i] !== clickedItem) {
+                thElements[i].style.backgroundColor = 'white';
+            }
+        }
+    }
+</script>
+
+</body>
+
+</html>
